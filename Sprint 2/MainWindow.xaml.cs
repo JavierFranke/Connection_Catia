@@ -79,6 +79,7 @@ namespace Sprint_2
             grid_rechteck.Visibility = Visibility.Hidden;
         }
 
+        //Rechnung von Rechteck
         public void btn_rechnerechteck_Click(object sender, RoutedEventArgs e)
         {
             double hoeherechteck = Convert.ToDouble(txb_hoeherechteck.Text);
@@ -99,12 +100,10 @@ namespace Sprint_2
             txb_ftmiyrechteck.Text = Convert.ToString(ftmiyrechteck);
 
         }
-
-
-        private void Btn_rechne_Click(object sender, RoutedEventArgs e)
+        //Rechnungdreieck
+        private void btn_rechne_Click(object sender, RoutedEventArgs e)
         {
-
-            string breitedreick = Convert.ToString(txb_breitedreieck.Text);
+            string breitedreick = Convert.ToDouble(txb_breitedreieck.Text);
             string hoehedreieck = Convert.ToString(txb_hoehedreieck.Text);
             string dickedreick = Convert.ToString(txb_dickedreick.Text);
             string dichtedreieck = Convert.ToString(txb_dichtedreieck.Text);
@@ -122,70 +121,37 @@ namespace Sprint_2
             txb_volumenrechteck.Text = Convert.ToString(Volumen);
             txb_gewichtrechteck.Text = Convert.ToString(Gewicht);
             txb_flaecherechteck.Text = Convert.ToString(Flaeche);
-
-
         }
-
-
-
-        //Rechnung von Rechteck
-        private void btn_rechnerechteck_Click(object sender, RoutedEventArgs e)
-        {
-            double hoeherechteck = Convert.ToDouble(txb_hoeherechteck.Text);
-            double breiterechteck = Convert.ToDouble(txb_breiterechteck.Text);
-            double dickerechteck = Convert.ToDouble(txb_dickerechteck.Text);
-            double dichterechteck = Convert.ToDouble(txb_dichterechteck.Text);
-
-            double flaecherechteck = hoeherechteck * breiterechteck;
-            double volumenrechteck = flaecherechteck * dickerechteck;
-            double gewichtrechteck = volumenrechteck * dichterechteck;
-            double ftmizrechteck = hoeherechteck * Math.Pow(breiterechteck, 3) / 12;
-            double ftmiyrechteck = breiterechteck * Math.Pow(hoeherechteck, 3) / 12;
-
-            txb_flaecherechteck.Text = Convert.ToString(flaecherechteck);
-            txb_volumenrechteck.Text = Convert.ToString(volumenrechteck);
-            txb_gewichtrechteck.Text = Convert.ToString(gewichtrechteck);
-            txb_ftmizrechteck.Text = Convert.ToString(ftmizrechteck);
-            txb_ftmiyrechteck.Text = Convert.ToString(ftmiyrechteck);
-        }
-
-
-
-
-
         //Rechnung von einem Quadrat
-        private void Btn_rechne_Click(object sender, RoutedEventArgs e)
+        private void btn_rechne_Click(object sender, RoutedEventArgs e)
         {
-            string hoehe = Convert.ToString(txb_hoehe.Text);
-            string dichte = Convert.ToString(txb_dichte.Text);
+            double hoehe = Convert.ToDouble(txb_hoehe.Text);
+            double dichte = Convert.ToDouble(txb_dichte.Text);
 
+            
+            double Dichte = Convert.ToDouble(txb_dichtequadrant.text);
+            double Volumen = Math.Pow(hoehe, 2) * dicke ;
+            double Gewicht = Volumen * Dichte;
+            double Flaeche = Math.Pow(hoehe, 2);
+            double ftmiyquadrat = 0.118 * Math.Pow(hoehe, 3);
+            double ftmixquadrat = Math.Pow(hoehe, 2) / 6;
 
-            Double hoehe = Convert.ToDouble(txb_hoehe);
-            Double Dichte = Convert.ToDouble(txb_dichtequadrant.text);
-
-            Double Volumen = Math.Pow(hoeher, 2) * laenge;
-            Double Gewicht = Volumen * Dichte;
-            Double Flaeche = Math.Pow(höer, 2);
-            Double ftmiyquadrat = 0.118 * Math.Pow(hoehe, 3);
-            Double ftmixquadrat = Math.Pow(hoehe, 2) / 6;
             txb_volumenrechteck.Text = Convert.ToString(Volumen);
             txb_gewichtrechteck.Text = Convert.ToString(Gewicht);
             txb_flaecherechteck.Text = Convert.ToString(Flaeche);
             Txb_ftmiyquadrat.Text = Convert.ToDouble(ftmiyquadrat);
             Txb_ftmixquadrat.Text = Convert.ToDouble(ftmixquadrat);
         }
-
-
         //Rechnung von einem Ring
         private void Btn_rechne_Click(object sender, RoutedEventArgs e)
         {
-            string innendurchmesser = Convert.ToString(txb_innendurchmesser.Text);
-            string aussendurchmesser = Convert.ToString(txb_aussendurchmesser.Text);
+            string innendurchmesser = Convert.ToString(txb_durchmesserhalbkreis2.Text);
+            string aussendurchmesser = Convert.ToString(txb_durchmesserhalbkreis.Text);
             string dichtering = Convert.ToString(txb_dichterring.Text);
 
 
-            Double innendurchmesser = Convert.ToDouble(innendurchmesser);
-            Double aussendurchmesser = Convert.ToDouble(aussendurchmesser);
+            Double durchmesserhalbkreis = Convert.ToDouble(durchmesserhalbkreis);
+            Double durchmesserhalbkreis2 = Convert.ToDouble(durchmesserhalbkreis2);
             Double Dichte = Convert.ToDouble(dichtering);
 
             Double Volumen = (3, 14 * (innendurchmesser - aussendurchmesser) ^ 3 * 3) / 4;
@@ -208,9 +174,9 @@ namespace Sprint_2
                 Double Durchmesser2 = Convert.ToDouble(aussendurchmesser);
                 Double Dichte = Convert.ToDouble(dichtekreis);
 
-                Double Volumen = (Math.PI * Math.Pow((Durchmesser1 - Durchmesser2), 2) * 3) / 8;
+                Double Volumen = (Math.PI * Math.Pow((durchmesserhalbkreis - durchmesserhalbkreis2), 2) * 3) / 8;
                 Double Gewicht = Volumen * Dichte;
-                Double Flaeche = ((Durchmesser1 - Durchmesser2) ^ 3 * Math.PI) / 2;
+                Double Flaeche = ((durchmesserhalbkreis - durchmesserhalbkreis2) ^ 3 * Math.PI) / 2;
 
                 txb_volumenrechteck.Text = Convert.ToString(Volumen);
                 txb_gewichtrechteck.Text = Convert.ToString(Gewicht);
