@@ -139,9 +139,4 @@ namespace Sprint_2
     }
 }
 
-//gdhfghgj
-<<<<<<< HEAD
-//kh
-=======
-//hjkghkghk
->>>>>>> 37bc23bf08b4440413f0d8b26b14d27e9c642eda
+
