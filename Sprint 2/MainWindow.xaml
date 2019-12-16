@@ -20,27 +20,30 @@
         </TreeView>
         <Button x:Name="btn_ende" Content="Ende" HorizontalAlignment="Left" Margin="707,388,0,0" VerticalAlignment="Top" Width="75" Click="btn_ende_Click"/>
 
-        <Grid x:Name="grid_quadrat" HorizontalAlignment="Left" Height="373" Margin="135,10,0,0" VerticalAlignment="Top" Width="647" Visibility="Hidden">
-            <Button x:Name="btn_rechnequadrat" Content="Rechne" HorizontalAlignment="Left" Margin="10,341,0,0" VerticalAlignment="Top" Width="75"/>
+        <Grid x:Name="grid_quadrat" HorizontalAlignment="Left" Height="373" Margin="135,10,0,0" VerticalAlignment="Top" Width="647" Visibility="Visible">
+            <Button x:Name="btn_rechnequadrat" Content="Rechne" HorizontalAlignment="Left" Margin="10,341,0,0" VerticalAlignment="Top" Width="75" Click="btn_rechnequadrat_Click"/>
             <Button x:Name="btn_löschenquadrat" Content="Löschen" HorizontalAlignment="Left" Margin="146,341,0,0" VerticalAlignment="Top" Width="74"/>
             <Label Content="a" HorizontalAlignment="Left" Margin="130,72,0,0" VerticalAlignment="Top"/>
             <Image x:Name="img_quadraut" HorizontalAlignment="Left" Height="100" Margin="285,24,0,0" VerticalAlignment="Top" Width="100"/>
-            <Label x:Name="lbl_höhequadrat" Content="Höhe h:" HorizontalAlignment="Left" Margin="146,158,0,0" VerticalAlignment="Top"/>
-            <Label x:Name="lbl_breitequadrat" Content="Breite b:" HorizontalAlignment="Left" Margin="143,189,0,0" VerticalAlignment="Top"/>
-            <Label x:Name="lbl_dickequadrat" Content="Dicke:" HorizontalAlignment="Left" Margin="155,220,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.395,0.231"/>
-            <Label x:Name="lbl_dichtequadrat" Content="Dichte:" HorizontalAlignment="Left" Margin="150,251,0,0" VerticalAlignment="Top" RenderTransformOrigin="-0.362,0.385"/>
-            <TextBox x:Name="txb_hoehequadrat" HorizontalAlignment="Left" Height="23" Margin="202,160,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
-            <TextBox x:Name="txb_breitequadrat" HorizontalAlignment="Left" Height="23" Margin="202,191,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
-            <TextBox x:Name="txb_dickequadrat" HorizontalAlignment="Left" Height="23" Margin="202,222,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
-            <TextBox x:Name="txb_dichtequadrat" HorizontalAlignment="Left" Height="23" Margin="202,253,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
+            <Label x:Name="lbl_längequadrat" Content="Länge a:" HorizontalAlignment="Left" Margin="146,158,0,0" VerticalAlignment="Top"/>
+            <Label x:Name="lbl_dickequadrat" Content="Dicke:" HorizontalAlignment="Left" Margin="155,189,0,0" VerticalAlignment="Top"/>
+            <Label x:Name="lbl_dichtequadrat" Content="Dichte:" HorizontalAlignment="Left" Margin="150,220,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.395,0.231"/>
+            <TextBox x:Name="txb_längequadrat" HorizontalAlignment="Left" Height="23" Margin="202,160,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
+            <TextBox x:Name="txb_dickequadrat" HorizontalAlignment="Left" Height="23" Margin="202,191,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
+            <TextBox x:Name="txb_dichtequadrat" HorizontalAlignment="Left" Height="23" Margin="202,222,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
             <Label x:Name="lbl_flaechequadrat" Content="Fläche A:" HorizontalAlignment="Left" Margin="389,158,0,0" VerticalAlignment="Top"/>
             <Label x:Name="lbl_volumenquadrat" Content="Volumen V:" HorizontalAlignment="Left" Margin="375,189,0,0" VerticalAlignment="Top"/>
             <Label x:Name="lbl_gewichtquadrat" Content="Gewicht:" HorizontalAlignment="Left" Margin="391,220,0,0" VerticalAlignment="Top"/>
             <Label x:Name="lbl_ftmizquadrat" Content="Flächenträgheitsmoment Iz:" HorizontalAlignment="Left" Margin="290,291,0,0" VerticalAlignment="Top"/>
             <Label x:Name="lbl_ftmiyquadrat" Content="Flächenträgheitsmoment Iy:" HorizontalAlignment="Left" Margin="289,322,0,0" VerticalAlignment="Top"/>
             <TextBox x:Name="txb_flaechequadrat" HorizontalAlignment="Left" Height="23" Margin="451,160,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" IsReadOnly="True"/>
-           
-            <Grid x:Name="grid_rechteck" HorizontalAlignment="Left" Height="373" Margin="135,10,-135,-10" VerticalAlignment="Top" Width="647" Visibility="Hidden">
+            <TextBox x:Name="txb_volumenquadrat" HorizontalAlignment="Left" Height="23" Margin="451,191,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120" IsReadOnly="True"/>
+            <TextBox x:Name="txb_gewichtquadrat" HorizontalAlignment="Left" Height="23" Margin="451,222,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120" IsReadOnly="True"/>
+            <TextBox x:Name="txb_ftmizquadrat" HorizontalAlignment="Left" Height="23" Margin="451,293,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120" IsReadOnly="True"/>
+            <TextBox x:Name="txb_ftmiyquadrat" HorizontalAlignment="Left" Height="23" Margin="451,324,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120" IsReadOnly="True"/>
+        </Grid>
+
+        <Grid x:Name="grid_rechteck" HorizontalAlignment="Left" Height="373" Margin="135,10,-135,-10" VerticalAlignment="Top" Width="647" Visibility="Hidden">
                 <Button x:Name="btn_rechnerechteck" Content="Rechne" HorizontalAlignment="Left" Margin="10,341,0,0" VerticalAlignment="Top" Width="75" Click="btn_rechnerechteck_Click"/>
                 <Button x:Name="btn_clearrechteck" Content="Löschen" HorizontalAlignment="Left" Margin="146,341,0,0" VerticalAlignment="Top" Width="74" Click="btn_clearrechteck_Click"/>
                 <Label Content="b" HorizontalAlignment="Left" Margin="130,72,0,0" VerticalAlignment="Top"/>
@@ -65,15 +68,10 @@
                 <TextBox x:Name="txb_ftmiyrechteck" HorizontalAlignment="Left" Height="23" Margin="451,324,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120" IsReadOnly="True"/>
             </Grid>
             
-            
-            <TextBox x:Name="txb_volumenquadrat" HorizontalAlignment="Left" Height="23" Margin="451,191,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120" IsReadOnly="True"/>
-            <TextBox x:Name="txb_gewichtquadrat" HorizontalAlignment="Left" Height="23" Margin="451,222,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120" IsReadOnly="True"/>
-            <TextBox x:Name="txb_ftmizquadrat" HorizontalAlignment="Left" Height="23" Margin="451,293,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120" IsReadOnly="True"/>
-            <TextBox x:Name="txb_ftmiyquadrat" HorizontalAlignment="Left" Height="23" Margin="451,324,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120" IsReadOnly="True"/>
-        </Grid>
+          
 
         <Grid x:Name="grid_dreieck" HorizontalAlignment="Left" Height="373" Margin="135,10,0,0" VerticalAlignment="Top" Width="647" Visibility="Hidden">
-            <Button x:Name="btn_rechnedreieck" Content="Rechne" HorizontalAlignment="Left" Margin="10,341,0,0" VerticalAlignment="Top" Width="75"/>
+            <Button x:Name="btn_rechnedreieck" Content="Rechne" HorizontalAlignment="Left" Margin="10,341,0,0" VerticalAlignment="Top" Width="75" Click="btn_rechnedreieck_Click"/>
             <Button x:Name="btn_cleardreieck" Content="Löschen" HorizontalAlignment="Left" Margin="146,341,0,0" VerticalAlignment="Top" Width="74"/>
             <Label Content="c" HorizontalAlignment="Left" Margin="130,72,0,0" VerticalAlignment="Top"/>
             <Image x:Name="img_dreieck" HorizontalAlignment="Left" Height="100" Margin="285,24,0,0" VerticalAlignment="Top" Width="100"/>
