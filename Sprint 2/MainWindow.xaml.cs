@@ -22,7 +22,7 @@ namespace Sprint_2
     /// </summary>
     public partial class MainWindow : System.Windows.Window  //_________________________________________ muss geändert werden wegen mehrdeutiger Verweis
     {
-        
+
 
         public MainWindow()
         {
@@ -31,7 +31,7 @@ namespace Sprint_2
 
         private void btn_ende_Click(object sender, RoutedEventArgs e)
         {
-           
+
             if (MessageBox.Show("Wollen Sie das Programm wirklich beenden?", "Schließen des Programms", MessageBoxButton.YesNo, MessageBoxImage.Question) == MessageBoxResult.Yes)
             {
                 Application.Current.Shutdown();
@@ -164,13 +164,13 @@ namespace Sprint_2
 
         private void Btn_rechnekreisring_Click(object sender, RoutedEventArgs e)
         {
-           
-                double außendurchmesser = Convert.ToDouble(txb_außendurchmesserkreisring.Text);
-                double innendurchmesser = Convert.ToDouble(txb_innendurchmesserkreisring.Text);
-                double dicke = Convert.ToDouble(txb_dickekreisring.Text);
-                double dichte = Convert.ToDouble(txb_dichtekreisring.Text);
+
+            double außendurchmesser = Convert.ToDouble(txb_außendurchmesserkreisring.Text);
+            double innendurchmesser = Convert.ToDouble(txb_innendurchmesserkreisring.Text);
+            double dicke = Convert.ToDouble(txb_dickekreisring.Text);
+            double dichte = Convert.ToDouble(txb_dichtekreisring.Text);
             if (außendurchmesser > innendurchmesser)
-            { 
+            {
                 double fläche = Math.PI * Math.Pow(außendurchmesser / 2, 2) - (Math.PI * Math.Pow(innendurchmesser / 2, 2));
                 double volumen = fläche * dicke;
                 double gewicht = volumen * dichte;
@@ -185,7 +185,7 @@ namespace Sprint_2
             else
             {
                 MessageBox.Show("Der Außendurchmesser muss größer als der Innendurchmesser sein!");
-                
+
             }
         }
         private void Btn_löschenquadrat_Click(object sender, RoutedEventArgs e)
@@ -247,7 +247,7 @@ namespace Sprint_2
             txb_innendurchmesserkreisring.Text = ("");
             txb_volumenkreisring.Text = ("");
 
-           
+
         }
         private void txb_hoeherechteck_LostFocus(object sender, RoutedEventArgs e)
         {
@@ -256,7 +256,7 @@ namespace Sprint_2
 
             if (Double.TryParse(tb.Text, out zahl))
             {
-                
+
                 tb.Foreground = Brushes.Green;
                 // alles gut
             }
@@ -275,9 +275,9 @@ namespace Sprint_2
             tb.Background = Brushes.White;
         }
 
-       
 
-        
+
+
 
         private void Button_Click_1(object sender, RoutedEventArgs e)
         {
@@ -315,9 +315,54 @@ namespace Sprint_2
                 MessageBox.Show("Bitte öffnen Sie CATIA!");
             }
         }
-    }
- }
 
+        private void Btn_catiakreis_Click(object sender, RoutedEventArgs e)
+        {
+            Catia_ConnectionKreis cc = new Catia_ConnectionKreis();
+            if (cc.laeuftCatia())
+            {
+                int r = Convert.ToInt32(txb_durchmesserkreis.Text);
+                int d = Convert.ToInt32(txb_dickekreis.Text);
+
+
+
+                cc.ErzeugePart();
+                cc.erstelleLeereSkizze();
+                cc.setMittelpunkt(r);
+                cc.ErzeugeBalkenkreis(d);
+
+            }
+            else
+            {
+                MessageBox.Show("Bitte öffnen Sie bitte CATIA.");
+            }
+        }
+
+        private void Btn_catiaring_Click(object sender, RoutedEventArgs e)
+        {
+            
+                Catia_ConnectionRing cc = new Catia_ConnectionRing();
+            if (cc.laeuftCatia())
+            {
+                //int r = Convert.ToInt32(txb_außendurchmesserkreisring);
+                //int d = Convert.ToInt32(txb_dickekreis.Text);
+                //int i = Convert.ToInt32(txb_innendurchmesserkreisring);
+
+
+                cc.ErzeugePart();
+                cc.erstelleLeereSkizze();
+                cc.setMittelpunkt();
+                cc.ErzeugeBalkenRing();
+              
+
+            }
+            else
+            {
+                MessageBox.Show("Bitte öffnen Sie bitte CATIA.");
+            }
+        }
+    }
+}
 
            
         

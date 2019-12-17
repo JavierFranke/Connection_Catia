@@ -6,16 +6,20 @@ using System.Threading.Tasks;
 using INFITF;
 using MECMOD;
 using PARTITF;
+using System.Windows.Input;
+using System.Windows;
 
 namespace Sprint_2
 {
-    class Catia_ConnectionQuadrat
+    class Catia_ConnectionKreis
     {
         INFITF.Application hsp_catiaApp;
         MECMOD.PartDocument hsp_catiaPart;
         MECMOD.Sketch hsp_catiaProfil;
 
 
+
+        // Abfrage Catia läuft?
         public bool laeuftCatia()
         {
             try
@@ -41,6 +45,8 @@ namespace Sprint_2
             hsp_catiaPart = catDocuments1.Add("Part") as MECMOD.PartDocument;
             return true;
         }
+
+        // Erstellung einer Leeren Skizze
         internal void erstelleLeereSkizze()
         {
             HybridBodies catHybridBodies1 = hsp_catiaPart.Part.HybridBodies;
@@ -61,70 +67,66 @@ namespace Sprint_2
         }
 
 
-        //public void erzeugePart()
-        //{
-        //    //erzeuge Part
-        //    Document partdoc = hsp_catiaApp.Documents.Add("Part");
+        public void erzeugePart()
+        {
+            //erzeuge Part
+            Document partdoc = hsp_catiaApp.Documents.Add("Part");
 
-        //    hsp_catiaPart = (PartDocument)partdoc;
-        //}
+            hsp_catiaPart = (PartDocument)partdoc;
+        }
         private void ErzeugeAchsensystem()
         {
-          
+            object[] arr = new object[] {0.0, 0.0, 0.0,
+                                         0.0, 1.0, 0.0,
+                                         0.0, 0.0, 1.0 };
+            hsp_catiaProfil.SetAbsoluteAxisData(arr);
         }
 
 
 
-        public void ErzeugeProfil(double längequadrat)
+        public void setMittelpunkt(double r)
         {
             // Skizze umbenennen
-            hsp_catiaProfil.set_Name("Quadrat");
+            hsp_catiaProfil.set_Name("Kreis");
 
-            // quadrat in Skizze einzeichnen
+            // Rechteck in Skizze einzeichnen
             // Skizze oeffnen
             Factory2D catFactory2D1 = hsp_catiaProfil.OpenEdition();
 
-            // Quadrat erzeugen
-            Point2D catPoint2D1 = catFactory2D1.CreatePoint(-längequadrat / 2, längequadrat / 2);
-            Point2D catPoint2D2 = catFactory2D1.CreatePoint(längequadrat / 2, längequadrat / 2);
-            Point2D catPoint2D3 = catFactory2D1.CreatePoint(längequadrat / 2, -längequadrat / 2);
-            Point2D catPoint2D4 = catFactory2D1.CreatePoint(-längequadrat / 2, -längequadrat / 2);
+            // Kreis erzeugen
+            // erst die Punkte
 
-            Line2D catLine2D1 = catFactory2D1.CreateLine(-längequadrat / 2, längequadrat / 2, längequadrat / 2, längequadrat / 2);
-            catLine2D1.StartPoint = catPoint2D1;
-            catLine2D1.EndPoint = catPoint2D2;
 
-            Line2D catLine2D2 = catFactory2D1.CreateLine(längequadrat / 2, längequadrat / 2, längequadrat / 2, -längequadrat / 2);
-            catLine2D2.StartPoint = catPoint2D2;
-            catLine2D2.EndPoint = catPoint2D3;
-
-            Line2D catLine2D3 = catFactory2D1.CreateLine(längequadrat / 2, -längequadrat / 2, -längequadrat / 2, -längequadrat / 2);
-            catLine2D3.StartPoint = catPoint2D3;
-            catLine2D3.EndPoint = catPoint2D4;
-
-            Line2D catLine2D4 = catFactory2D1.CreateLine(-längequadrat / 2, -längequadrat / 2, -längequadrat / 2, längequadrat / 2);
-            catLine2D4.StartPoint = catPoint2D4;
-            catLine2D4.EndPoint = catPoint2D1;
+            Circle2D circle2D = catFactory2D1.CreateCircle(0, 0, r, 0, 0);
 
             // Skizzierer verlassen
             hsp_catiaProfil.CloseEdition();
             // Part aktualisieren
             hsp_catiaPart.Part.Update();
         }
-        public void ErzeugeBalken(Double l)
+
+
+
+
+
+        public void ErzeugeBalkenkreis(double d)
         {
             // Hauptkoerper in Bearbeitung definieren
             hsp_catiaPart.Part.InWorkObject = hsp_catiaPart.Part.MainBody;
 
             // Block(Balken) erzeugen
             ShapeFactory catShapeFactory1 = (ShapeFactory)hsp_catiaPart.Part.ShapeFactory;
-            Pad catPad1 = catShapeFactory1.AddNewPad(hsp_catiaProfil, l);
+            Pad catPad1 = catShapeFactory1.AddNewPad(hsp_catiaProfil, d);
 
             // Block umbenennen
-            catPad1.set_Name("Balken");
+            catPad1.set_Name("Stange");
 
             // Part aktualisieren
             hsp_catiaPart.Part.Update();
         }
+        //}
+
+        //}
     }
 }
+
