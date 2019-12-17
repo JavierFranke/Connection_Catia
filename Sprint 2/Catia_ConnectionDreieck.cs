@@ -97,7 +97,7 @@ namespace Sprint_2
             catLine2D1.StartPoint = catPoint2D1;
             catLine2D1.EndPoint = catPoint2D2;
 
-            Line2D catLine2D2 = catFactory2D1.CreateLine(0, hoehedreieck, breitedreieck / 2, 0);
+            Line2D catLine2D2 = catFactory2D1.CreateLine(0, Math.Sqrt(Math.Pow(hoehedreieck,4)), breitedreieck / 2, 0);
             catLine2D2.StartPoint = catPoint2D2;
             catLine2D2.EndPoint = catPoint2D3;
 
@@ -105,7 +105,7 @@ namespace Sprint_2
             catLine2D3.StartPoint = catPoint2D3;
             catLine2D3.EndPoint = catPoint2D4;
 
-            Line2D catLine2D4 = catFactory2D1.CreateLine(-breitedreieck / 2, 0, 0, hoehedreieck );
+            Line2D catLine2D4 = catFactory2D1.CreateLine(-breitedreieck / 2, 0, 0, Math.Sqrt(Math.Pow(hoehedreieck, 4)));
             catLine2D4.StartPoint = catPoint2D4;
             catLine2D4.EndPoint = catPoint2D1;
 
