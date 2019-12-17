@@ -116,8 +116,8 @@
             <TextBox x:Name="txb_gewichtkreis" HorizontalAlignment="Left" Height="23" Margin="451,222,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120" IsReadOnly="True"/>
             <TextBox x:Name="txb_ftmizkreis" HorizontalAlignment="Left" Height="23" Margin="451,293,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120" IsReadOnly="True"/>
             <TextBox x:Name="txb_ftmiykreis" HorizontalAlignment="Left" Height="23" Margin="451,324,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120" IsReadOnly="True"/>
-
             <Button x:Name="btn_catiakreis" Content="CATIA" HorizontalAlignment="Left" Margin="78,309,0,0" VerticalAlignment="Top" Width="75" Click="Button_Click_1"/>
+
 
 
         </Grid>
@@ -145,9 +145,9 @@
             <TextBox x:Name="txb_gewichtkreisring" HorizontalAlignment="Left" Height="23" Margin="451,222,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120" IsReadOnly="True"/>
             <TextBox x:Name="txb_ftmizkreisring" HorizontalAlignment="Left" Height="23" Margin="451,293,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120" IsReadOnly="True"/>
             <TextBox x:Name="txb_ftmiykreisring" HorizontalAlignment="Left" Height="23" Margin="451,324,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120" IsReadOnly="True"/>
-           
+            <Button x:Name="btn_catiaring" Content="CATIA" HorizontalAlignment="Left"  Margin="78,309,0,80" Click="Btn_catiaring_Click" Width="75"/>
         </Grid>
-        <Button x:Name="btn_catiaring" Content="CATIA Ring" HorizontalAlignment="Left"  Margin="78,312,0,77" Click="Btn_catiaring_Click" Width="75"/>
+        
 
     </Grid>
 </Window>

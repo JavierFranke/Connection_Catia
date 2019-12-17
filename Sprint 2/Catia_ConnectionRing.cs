@@ -85,7 +85,7 @@ namespace Sprint_2
 
 
 
-        public void setMittelpunkt()
+        public void setMittelpunkt(double a, double i)
         {
             // Skizze umbenennen
             hsp_catiaProfil.set_Name("Kreis");
@@ -99,8 +99,8 @@ namespace Sprint_2
             // erst die Punkte
 
 
-            Circle2D circle2D = catFactory2D1.CreateCircle(0, 0, 20, 0, 0);
-            Circle2D circle3D = catFactory2D2.CreateCircle(0, 0, 50, 0, 0);
+            Circle2D circle2D = catFactory2D1.CreateCircle(0, 0, i, 0, 0);
+            Circle2D circle3D = catFactory2D2.CreateCircle(0, 0, a, 0, 0);
 
             // Skizzierer verlassen
             hsp_catiaProfil.CloseEdition();
@@ -112,14 +112,14 @@ namespace Sprint_2
 
 
 
-        public void ErzeugeBalkenRing()
+        public void ErzeugeBalkenRing(double d)
         {
             // Hauptkoerper in Bearbeitung definieren
             hsp_catiaPart.Part.InWorkObject = hsp_catiaPart.Part.MainBody;
 
             // Block(Balken) erzeugen
             ShapeFactory catShapeFactory1 = (ShapeFactory)hsp_catiaPart.Part.ShapeFactory;
-            Pad catPad1 = catShapeFactory1.AddNewPad(hsp_catiaProfil, 30);
+            Pad catPad1 = catShapeFactory1.AddNewPad(hsp_catiaProfil, d);
 
             // Block umbenennen
             catPad1.set_Name("Stange");

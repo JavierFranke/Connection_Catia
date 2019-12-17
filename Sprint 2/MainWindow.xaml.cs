@@ -344,15 +344,15 @@ namespace Sprint_2
                 Catia_ConnectionRing cc = new Catia_ConnectionRing();
             if (cc.laeuftCatia())
             {
-                //int r = Convert.ToInt32(txb_außendurchmesserkreisring);
-                //int d = Convert.ToInt32(txb_dickekreis.Text);
-                //int i = Convert.ToInt32(txb_innendurchmesserkreisring);
+                int a = Convert.ToInt32(txb_außendurchmesserkreisring.Text);
+                int d = Convert.ToInt32(txb_dickekreisring.Text);
+                int i = Convert.ToInt32(txb_innendurchmesserkreisring.Text);
 
 
                 cc.ErzeugePart();
                 cc.erstelleLeereSkizze();
-                cc.setMittelpunkt();
-                cc.ErzeugeBalkenRing();
+                cc.setMittelpunkt(a,i);
+                cc.ErzeugeBalkenRing(d);
               
 
             }
