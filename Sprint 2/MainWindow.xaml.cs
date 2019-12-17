@@ -103,6 +103,7 @@ namespace Sprint_2
             txb_ftmizrechteck.Text = Convert.ToString(ftmizrechteck);
             txb_ftmiyrechteck.Text = Convert.ToString(ftmiyrechteck);
 
+
         }
         //Rechnungdreieck
         private void btn_rechnedreieck_Click(object sender, RoutedEventArgs e)
@@ -246,8 +247,11 @@ namespace Sprint_2
             txb_gewichtkreisring.Text = ("");
             txb_innendurchmesserkreisring.Text = ("");
             txb_volumenkreisring.Text = ("");
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> 940e3a26ff46c6de270c1182e4e7cc4abe1c6fb0
         }
         private void txb_hoeherechteck_LostFocus(object sender, RoutedEventArgs e)
         {
@@ -315,6 +319,66 @@ namespace Sprint_2
                 MessageBox.Show("Bitte öffnen Sie CATIA!");
             }
         }
+<<<<<<< HEAD
+=======
+
+        private void Btn_catiadreieck_Click(object sender, RoutedEventArgs e)
+        {
+            Catia_ConnectionDreieck cc = new Catia_ConnectionDreieck();
+            if (cc.laeuftCatia())
+            {
+                int h = Convert.ToInt32(txb_hoehedreieck.Text);
+                int b = Convert.ToInt32(txb_breitedreieck.Text);
+                int d = Convert.ToInt32(txb_dickedreieck.Text);
+                cc.ErzeugePart();
+                cc.erstelleLeereSkizze();
+                cc.ErzeugeProfil(h, b);
+                cc.ErzeugeBalken(d);
+            }
+            else
+            {
+                MessageBox.Show("Bitte öffnen Sie CATIA!");
+            }
+        }
+
+
+
+
+
+
+
+        private void btn_Kupfer(object sender, RoutedEventArgs e)
+        {
+            txb_dichtedreieck.Text = "8,96";
+            txb_dichtequadrat.Text = "8,96";
+            txb_dichtekreis.Text = "8,96";
+            txb_dichterechteck.Text = "8,96";
+            txb_dichtekreisring.Text = "8,96";
+        }
+
+        private void btn_Eisen(object sender, RoutedEventArgs e)
+        {
+            txb_dichtedreieck.Text = "7,874";
+            txb_dichtequadrat.Text = "7,874";
+            txb_dichtekreis.Text = "7,874";
+            txb_dichterechteck.Text = "7,874";
+            txb_dichtekreisring.Text = "7,874";
+
+        }
+
+        private void btn_Aluminium(object sender, RoutedEventArgs e)
+        {
+            txb_dichtedreieck.Text = "2,7";
+            txb_dichtequadrat.Text = "2,7";
+            txb_dichtekreis.Text = "2,7";
+            txb_dichterechteck.Text = "2,7";
+            txb_dichtekreisring.Text = "2,7";
+        }
+
+
+    }
+ }
+>>>>>>> 940e3a26ff46c6de270c1182e4e7cc4abe1c6fb0
 
         private void Btn_catiakreis_Click(object sender, RoutedEventArgs e)
         {

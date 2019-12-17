@@ -76,7 +76,11 @@
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="Catia_Connection.cs" />
+<<<<<<< HEAD
     <Compile Include="Catia_ConnectionKreis.cs" />
+=======
+    <Compile Include="Catia_ConnectionDreieck.cs" />
+>>>>>>> 940e3a26ff46c6de270c1182e4e7cc4abe1c6fb0
     <Compile Include="Catia_ConnectionQuadrat.cs" />
     <Compile Include="Catia_ConnectionRing.cs" />
     <Compile Include="MainWindow.xaml.cs">
