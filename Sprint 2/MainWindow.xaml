@@ -15,7 +15,7 @@
             </TreeViewItem>
             <TreeViewItem x:Name="trv_rundekoerper" Header="Runde Körper">
                 <TreeViewItem x:Name="trv_kreis" Header="Kreis" Selected="trv_kreis_Selected"/>
-                <TreeViewItem x:Name="trv_halbkreis" Header="Halbkreis" Selected="trv_halbkreis_Selected"/>
+                <TreeViewItem x:Name="trv_ring" Header="Ring" Selected="trv_halbkreis_Selected"/>
             </TreeViewItem>
         </TreeView>
         <Button x:Name="btn_ende" Content="Ende" HorizontalAlignment="Left" Margin="707,388,0,0" VerticalAlignment="Top" Width="75" Click="btn_ende_Click"/>
@@ -23,14 +23,13 @@
         <Grid x:Name="grid_quadrat" HorizontalAlignment="Left" Height="373" Margin="135,10,0,0" VerticalAlignment="Top" Width="647" Visibility="Visible">
             <Button x:Name="btn_rechnequadrat" Content="Rechne" HorizontalAlignment="Left" Margin="10,341,0,0" VerticalAlignment="Top" Width="75" Click="btn_rechnequadrat_Click"/>
             <Button x:Name="btn_löschenquadrat" Content="Löschen" HorizontalAlignment="Left" Margin="146,341,0,0" VerticalAlignment="Top" Width="74" Click="Btn_löschenquadrat_Click"/>
-            <Label Content="a" HorizontalAlignment="Left" Margin="130,72,0,0" VerticalAlignment="Top"/>
-            <Image x:Name="img_quadraut" HorizontalAlignment="Left" Height="100" Margin="285,24,0,0" VerticalAlignment="Top" Width="100"/>
+            <Image x:Name="img_quadraut" HorizontalAlignment="Left" Height="100" Margin="285,24,0,0" VerticalAlignment="Top" Width="100" Source="Quadrat.PNG"/>
             <Label x:Name="lbl_längequadrat" Content="Länge a:" HorizontalAlignment="Left" Margin="146,158,0,0" VerticalAlignment="Top"/>
             <Label x:Name="lbl_dickequadrat" Content="Dicke:" HorizontalAlignment="Left" Margin="155,189,0,0" VerticalAlignment="Top"/>
             <Label x:Name="lbl_dichtequadrat" Content="Dichte:" HorizontalAlignment="Left" Margin="150,220,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.395,0.231"/>
-            <TextBox x:Name="txb_längequadrat" HorizontalAlignment="Left" Height="23" Margin="202,160,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
-            <TextBox x:Name="txb_dickequadrat" HorizontalAlignment="Left" Height="23" Margin="202,191,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
-            <TextBox x:Name="txb_dichtequadrat" HorizontalAlignment="Left" Height="23" Margin="202,222,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
+            <TextBox x:Name="txb_längequadrat" HorizontalAlignment="Left" Height="23" Margin="202,160,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120" LostFocus="txb_hoeherechteck_LostFocus" GotFocus="txb_hoeherechteck_GotFocus"/>
+            <TextBox x:Name="txb_dickequadrat" HorizontalAlignment="Left" Height="23" Margin="202,191,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120" LostFocus="txb_hoeherechteck_LostFocus" GotFocus="txb_hoeherechteck_GotFocus"/>
+            <TextBox x:Name="txb_dichtequadrat" HorizontalAlignment="Left" Height="23" Margin="202,222,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120" LostFocus="txb_hoeherechteck_LostFocus" GotFocus="txb_hoeherechteck_GotFocus"/>
             <Label x:Name="lbl_flaechequadrat" Content="Fläche A:" HorizontalAlignment="Left" Margin="389,158,0,0" VerticalAlignment="Top"/>
             <Label x:Name="lbl_volumenquadrat" Content="Volumen V:" HorizontalAlignment="Left" Margin="375,189,0,0" VerticalAlignment="Top"/>
             <Label x:Name="lbl_gewichtquadrat" Content="Gewicht:" HorizontalAlignment="Left" Margin="391,220,0,0" VerticalAlignment="Top"/>
@@ -41,13 +40,13 @@
             <TextBox x:Name="txb_gewichtquadrat" HorizontalAlignment="Left" Height="23" Margin="451,222,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120" IsReadOnly="True"/>
             <TextBox x:Name="txb_ftmizquadrat" HorizontalAlignment="Left" Height="23" Margin="451,293,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120" IsReadOnly="True"/>
             <TextBox x:Name="txb_ftmiyquadrat" HorizontalAlignment="Left" Height="23" Margin="451,324,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120" IsReadOnly="True"/>
+            <Button x:Name="btn_catiaquadrat" Content="CATIA" HorizontalAlignment="Left" Margin="78,309,0,0" VerticalAlignment="Top" Width="75" Click="Button_Click_1"/>
         </Grid>
 
-        <Grid x:Name="grid_rechteck" HorizontalAlignment="Left" Height="373" Margin="135,10,-135,-10" VerticalAlignment="Top" Width="647" Visibility="Hidden">
+        <Grid x:Name="grid_rechteck" HorizontalAlignment="Left" Height="373" Margin="135,10,-135,-10" VerticalAlignment="Top" Width="647" Visibility="Visible">
                 <Button x:Name="btn_rechnerechteck" Content="Rechne" HorizontalAlignment="Left" Margin="10,341,0,0" VerticalAlignment="Top" Width="75" Click="btn_rechnerechteck_Click"/>
                 <Button x:Name="btn_clearrechteck" Content="Löschen" HorizontalAlignment="Left" Margin="146,341,0,0" VerticalAlignment="Top" Width="74" Click="btn_clearrechteck_Click"/>
-                <Label Content="b" HorizontalAlignment="Left" Margin="130,72,0,0" VerticalAlignment="Top"/>
-                <Image x:Name="img_rechteck" HorizontalAlignment="Left" Height="100" Margin="285,24,0,0" VerticalAlignment="Top" Width="100" Source="Rechteck.PNG"/>
+            <Image x:Name="img_rechteck" HorizontalAlignment="Left" Height="100" Margin="285,24,0,0" VerticalAlignment="Top" Width="100" Source="Rechteck.PNG"/>
                 <Label x:Name="lbl_höherechteck" Content="Höhe h:" HorizontalAlignment="Left" Margin="146,158,0,0" VerticalAlignment="Top"/>
                 <Label x:Name="lbl_breiterechteck" Content="Breite b:" HorizontalAlignment="Left" Margin="143,189,0,0" VerticalAlignment="Top"/>
                 <Label x:Name="lbl_dickerechteck" Content="Dicke:" HorizontalAlignment="Left" Margin="155,220,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.395,0.231"/>
@@ -66,15 +65,16 @@
                 <TextBox x:Name="txb_gewichtrechteck" HorizontalAlignment="Left" Height="23" Margin="451,222,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120" IsReadOnly="True"/>
                 <TextBox x:Name="txb_ftmizrechteck" HorizontalAlignment="Left" Height="23" Margin="451,293,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120" IsReadOnly="True"/>
                 <TextBox x:Name="txb_ftmiyrechteck" HorizontalAlignment="Left" Height="23" Margin="451,324,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120" IsReadOnly="True"/>
-            </Grid>
+                <Button Content="CATIA" HorizontalAlignment="Left" Margin="213,383,0,0" VerticalAlignment="Top" Width="75" Click="Button_Click"/>
             
+        </Grid>
+             
           
 
         <Grid x:Name="grid_dreieck" HorizontalAlignment="Left" Height="373" Margin="135,10,0,0" VerticalAlignment="Top" Width="647" Visibility="Hidden">
             <Button x:Name="btn_rechnedreieck" Content="Rechne" HorizontalAlignment="Left" Margin="10,341,0,0" VerticalAlignment="Top" Width="75" Click="btn_rechnedreieck_Click"/>
             <Button x:Name="btn_cleardreieck" Content="Löschen" HorizontalAlignment="Left" Margin="146,341,0,0" VerticalAlignment="Top" Width="74" Click="Btn_cleardreieck_Click"/>
-            <Label Content="c" HorizontalAlignment="Left" Margin="130,72,0,0" VerticalAlignment="Top"/>
-            <Image x:Name="img_dreieck" HorizontalAlignment="Left" Height="100" Margin="285,24,0,0" VerticalAlignment="Top" Width="100"/>
+            <Image x:Name="img_dreieck" HorizontalAlignment="Left" Height="100" Margin="285,24,0,0" VerticalAlignment="Top" Width="100" Source="Dreieck.PNG"/>
             <Label x:Name="lbl_höhedreieck" Content="Höhe h:" HorizontalAlignment="Left" Margin="146,158,0,0" VerticalAlignment="Top"/>
             <Label x:Name="lbl_breitedreieck" Content="Breite b:" HorizontalAlignment="Left" Margin="143,189,0,0" VerticalAlignment="Top"/>
             <Label x:Name="lbl_dickedreieck" Content="Dicke:" HorizontalAlignment="Left" Margin="155,220,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.395,0.231"/>
@@ -93,13 +93,13 @@
             <TextBox x:Name="txb_gewichtdreieck" HorizontalAlignment="Left" Height="23" Margin="451,222,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120" IsReadOnly="True"/>
             <TextBox x:Name="txb_ftmizdreieck" HorizontalAlignment="Left" Height="23" Margin="451,293,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120" IsReadOnly="True"/>
             <TextBox x:Name="txb_ftmiydreieck" HorizontalAlignment="Left" Height="23" Margin="451,324,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120" IsReadOnly="True"/>
+            <Button x:Name="btn_catiadreieck" Content="CATIA" HorizontalAlignment="Left" Margin="78,309,0,0" VerticalAlignment="Top" Width="75" Click="Button_Click_1"/>
         </Grid>
 
         <Grid x:Name="grid_kreis" HorizontalAlignment="Left" Height="373" Margin="135,10,0,0" VerticalAlignment="Top" Width="647" Visibility="Hidden">
             <Button x:Name="btn_rechnekreis" Content="Rechne" HorizontalAlignment="Left" Margin="10,341,0,0" VerticalAlignment="Top" Width="75" Click="Btn_rechnekreis_Click"/>
             <Button x:Name="btn_clearkreis" Content="Löschen" HorizontalAlignment="Left" Margin="146,341,0,0" VerticalAlignment="Top" Width="74" Click="Btn_clearkreis_Click"/>
-            <Label Content="d" HorizontalAlignment="Left" Margin="130,72,0,0" VerticalAlignment="Top"/>
-            <Image x:Name="img_kreis" HorizontalAlignment="Left" Height="100" Margin="285,24,0,0" VerticalAlignment="Top" Width="100"/>
+            <Image x:Name="img_kreis" HorizontalAlignment="Left" Height="100" Margin="285,24,0,0" VerticalAlignment="Top" Width="100" Source="Kreis.PNG"/>
             <Label x:Name="lbl_durchmesserkreis" Content="Durchmesser d:" HorizontalAlignment="Left" Margin="105,158,0,0" VerticalAlignment="Top"/>
             <Label x:Name="lbl_dickekreis" Content="Dicke:" HorizontalAlignment="Left" Margin="155,191,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.395,0.231"/>
             <Label x:Name="lbl_dichtekreis" Content="Dichte:" HorizontalAlignment="Left" Margin="150,222,0,0" VerticalAlignment="Top" RenderTransformOrigin="-0.362,0.385"/>
@@ -122,8 +122,7 @@
         <Grid x:Name="grid_kreisring" HorizontalAlignment="Left" Height="373" Margin="135,10,0,0" VerticalAlignment="Top" Width="647" Visibility="Hidden">
             <Button x:Name="btn_rechnekreisring" Content="Rechne" HorizontalAlignment="Left" Margin="10,341,0,0" VerticalAlignment="Top" Width="75" Click="Btn_rechnekreisring_Click"/>
             <Button x:Name="btn_clearkreisring" Content="Löschen" HorizontalAlignment="Left" Margin="146,341,0,0" VerticalAlignment="Top" Width="74" Click="Btn_clearkreisring_Click"/>
-            <Label Content="d" HorizontalAlignment="Left" Margin="130,72,0,0" VerticalAlignment="Top"/>
-            <Image x:Name="img_kreisring" HorizontalAlignment="Left" Height="100" Margin="285,24,0,0" VerticalAlignment="Top" Width="100"/>
+            <Image x:Name="img_kreisring" HorizontalAlignment="Left" Height="100" Margin="285,24,0,0" VerticalAlignment="Top" Width="100" Source="Ring.PNG"/>
             <Label x:Name="lbl_innendurchmesserkreisring" Content="Innendurchmesser d:" HorizontalAlignment="Left" Margin="77,189,0,0" VerticalAlignment="Top"/>
             <Label x:Name="lbl_außendurchmesserkreisring" Content="Außendurchmesser D:" HorizontalAlignment="Left" Margin="71,158,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.675,2.038"/>
             <Label x:Name="lbl_dickekreisring" Content="Dicke:" HorizontalAlignment="Left" Margin="155,220,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.395,0.231"/>
@@ -143,6 +142,6 @@
             <TextBox x:Name="txb_ftmizkreisring" HorizontalAlignment="Left" Height="23" Margin="451,293,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120" IsReadOnly="True"/>
             <TextBox x:Name="txb_ftmiykreisring" HorizontalAlignment="Left" Height="23" Margin="451,324,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120" IsReadOnly="True"/>
         </Grid>
-        <Button Content="CATIA" HorizontalAlignment="Left" Margin="213,383,0,0" VerticalAlignment="Top" Width="75" Click="Button_Click"/>
+       
     </Grid>
 </Window>

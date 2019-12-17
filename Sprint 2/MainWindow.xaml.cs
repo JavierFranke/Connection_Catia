@@ -160,21 +160,29 @@ namespace Sprint_2
 
         private void Btn_rechnekreisring_Click(object sender, RoutedEventArgs e)
         {
-            double außendurchmesser = Convert.ToDouble(txb_außendurchmesserkreisring.Text);
-            double innendurchmesser = Convert.ToDouble(txb_innendurchmesserkreisring.Text);
-            double dicke = Convert.ToDouble(txb_dickekreisring.Text);
-            double dichte = Convert.ToDouble(txb_dichtekreisring.Text);
+           
+                double außendurchmesser = Convert.ToDouble(txb_außendurchmesserkreisring.Text);
+                double innendurchmesser = Convert.ToDouble(txb_innendurchmesserkreisring.Text);
+                double dicke = Convert.ToDouble(txb_dickekreisring.Text);
+                double dichte = Convert.ToDouble(txb_dichtekreisring.Text);
+            if (außendurchmesser > innendurchmesser)
+            { 
+                double fläche = Math.PI * Math.Pow(außendurchmesser / 2, 2) - (Math.PI * Math.Pow(innendurchmesser / 2, 2));
+                double volumen = fläche * dicke;
+                double gewicht = volumen * dichte;
+                double ftm = (Math.PI * (Math.Pow(außendurchmesser, 4) - Math.Pow(innendurchmesser, 4))) / 64;
 
-            double fläche = Math.PI * Math.Pow(außendurchmesser / 2, 2) - (Math.PI * Math.Pow(innendurchmesser/2,2));
-            double volumen = fläche * dicke;
-            double gewicht = volumen * dicke;
-            double ftm = (Math.PI * (Math.Pow(außendurchmesser, 4) - Math.Pow(innendurchmesser, 4))) / 64;
-
-            txb_flaechekreisring.Text = Convert.ToString(fläche);
-            txb_volumenkreisring.Text = Convert.ToString(volumen);
-            txb_gewichtkreisring.Text = Convert.ToString(gewicht);
-            txb_ftmiykreisring.Text = Convert.ToString(ftm);
-            txb_ftmizkreisring.Text = Convert.ToString(ftm);
+                txb_flaechekreisring.Text = Convert.ToString(fläche);
+                txb_volumenkreisring.Text = Convert.ToString(volumen);
+                txb_gewichtkreisring.Text = Convert.ToString(gewicht);
+                txb_ftmiykreisring.Text = Convert.ToString(ftm);
+                txb_ftmizkreisring.Text = Convert.ToString(ftm);
+            }
+            else
+            {
+                MessageBox.Show("Der Außendurchmesser muss größer als der Innendurchmesser sein!");
+                
+            }
         }
         private void Btn_löschenquadrat_Click(object sender, RoutedEventArgs e)
         {
@@ -234,6 +242,8 @@ namespace Sprint_2
             txb_gewichtkreisring.Text = ("");
             txb_innendurchmesserkreisring.Text = ("");
             txb_volumenkreisring.Text = ("");
+
+           
         }
         private void txb_hoeherechteck_LostFocus(object sender, RoutedEventArgs e)
         {
@@ -242,14 +252,15 @@ namespace Sprint_2
 
             if (Double.TryParse(tb.Text, out zahl))
             {
-                tb.Background = Brushes.Green;
-                tb.Foreground = Brushes.Black;
+                
+                tb.Foreground = Brushes.Green;
                 // alles gut
             }
             else
             {
                 MessageBox.Show("Es dürfen nur positive Zahlen eingegeben werden!", "Fehler");
                 // Fehler
+                tb.Background = Brushes.Red;
             }
         }
 
@@ -274,6 +285,20 @@ namespace Sprint_2
                 cc.ErzeugePart();
                 cc.erstelleLeereSkizze();
                 cc.ErzeugeProfil(h,b);
+                cc.ErzeugeBalken(d);
+            }
+        }
+
+        private void Button_Click_1(object sender, RoutedEventArgs e)
+        {
+            Catia_ConnectionQuadrat cc = new Catia_ConnectionQuadrat();
+            if (cc.laeuftCatia())
+            {
+                int l = Convert.ToInt32(txb_längequadrat.Text);
+                int d = Convert.ToInt32(txb_dickequadrat.Text);
+                cc.ErzeugePart();
+                cc.erstelleLeereSkizze();
+                cc.ErzeugeProfil(l);
                 cc.ErzeugeBalken(d);
             }
         }

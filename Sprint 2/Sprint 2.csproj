@@ -75,8 +75,8 @@
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="BerechneKreis.cs" />
     <Compile Include="Catia_Connection.cs" />
+    <Compile Include="Catia_ConnectionQuadrat.cs" />
     <Compile Include="MainWindow.xaml.cs">
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
@@ -110,6 +110,18 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Rechteck.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Kreis.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Quadrat.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Ring.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Dreieck.PNG" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
