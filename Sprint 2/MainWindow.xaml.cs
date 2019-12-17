@@ -31,7 +31,11 @@ namespace Sprint_2
 
         private void btn_ende_Click(object sender, RoutedEventArgs e)
         {
-            System.Windows.Application.Current.Shutdown();
+           
+            if (MessageBox.Show("Wollen Sie das Programm wirklich beenden?", "Schließen des Programms", MessageBoxButton.YesNo, MessageBoxImage.Question) == MessageBoxResult.Yes)
+            {
+                Application.Current.Shutdown();
+            }
         }
 
         private void trv_quadrat_Selected(object sender, RoutedEventArgs e)
@@ -273,21 +277,7 @@ namespace Sprint_2
 
        
 
-        public void Button_Click(object sender, RoutedEventArgs e)
-        {
-           
-            Catia_Connection cc = new Catia_Connection();
-            if (cc.laeuftCatia())
-            {
-                int h = Convert.ToInt32(txb_hoeherechteck.Text);
-                int b = Convert.ToInt32(txb_breiterechteck.Text);
-                int d = Convert.ToInt32(txb_dickerechteck.Text);
-                cc.ErzeugePart();
-                cc.erstelleLeereSkizze();
-                cc.ErzeugeProfil(h,b);
-                cc.ErzeugeBalken(d);
-            }
-        }
+        
 
         private void Button_Click_1(object sender, RoutedEventArgs e)
         {
@@ -300,6 +290,29 @@ namespace Sprint_2
                 cc.erstelleLeereSkizze();
                 cc.ErzeugeProfil(l);
                 cc.ErzeugeBalken(d);
+            }
+            else
+            {
+                MessageBox.Show("Bitte öffnen Sie CATIA!");
+            }
+        }
+
+        private void Btn_catiarechteck_Click(object sender, RoutedEventArgs e)
+        {
+            Catia_Connection cc = new Catia_Connection();
+            if (cc.laeuftCatia())
+            {
+                int h = Convert.ToInt32(txb_hoeherechteck.Text);
+                int b = Convert.ToInt32(txb_breiterechteck.Text);
+                int d = Convert.ToInt32(txb_dickerechteck.Text);
+                cc.ErzeugePart();
+                cc.erstelleLeereSkizze();
+                cc.ErzeugeProfil(h, b);
+                cc.ErzeugeBalken(d);
+            }
+            else
+            {
+                MessageBox.Show("Bitte öffnen Sie CATIA!");
             }
         }
     }

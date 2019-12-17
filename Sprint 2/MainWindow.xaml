@@ -20,7 +20,7 @@
         </TreeView>
         <Button x:Name="btn_ende" Content="Ende" HorizontalAlignment="Left" Margin="707,388,0,0" VerticalAlignment="Top" Width="75" Click="btn_ende_Click"/>
 
-        <Grid x:Name="grid_quadrat" HorizontalAlignment="Left" Height="373" Margin="135,10,0,0" VerticalAlignment="Top" Width="647" Visibility="Visible">
+        <Grid x:Name="grid_quadrat" HorizontalAlignment="Left" Height="373" Margin="135,10,0,0" VerticalAlignment="Top" Width="647" Visibility="Hidden">
             <Button x:Name="btn_rechnequadrat" Content="Rechne" HorizontalAlignment="Left" Margin="10,341,0,0" VerticalAlignment="Top" Width="75" Click="btn_rechnequadrat_Click"/>
             <Button x:Name="btn_löschenquadrat" Content="Löschen" HorizontalAlignment="Left" Margin="146,341,0,0" VerticalAlignment="Top" Width="74" Click="Btn_löschenquadrat_Click"/>
             <Image x:Name="img_quadraut" HorizontalAlignment="Left" Height="100" Margin="285,24,0,0" VerticalAlignment="Top" Width="100" Source="Quadrat.PNG"/>
@@ -43,7 +43,7 @@
             <Button x:Name="btn_catiaquadrat" Content="CATIA" HorizontalAlignment="Left" Margin="78,309,0,0" VerticalAlignment="Top" Width="75" Click="Button_Click_1"/>
         </Grid>
 
-        <Grid x:Name="grid_rechteck" HorizontalAlignment="Left" Height="373" Margin="135,10,-135,-10" VerticalAlignment="Top" Width="647" Visibility="Visible">
+        <Grid x:Name="grid_rechteck" HorizontalAlignment="Left" Height="373" Margin="135,10,-135,-10" VerticalAlignment="Top" Width="647" Visibility="Hidden">
                 <Button x:Name="btn_rechnerechteck" Content="Rechne" HorizontalAlignment="Left" Margin="10,341,0,0" VerticalAlignment="Top" Width="75" Click="btn_rechnerechteck_Click"/>
                 <Button x:Name="btn_clearrechteck" Content="Löschen" HorizontalAlignment="Left" Margin="146,341,0,0" VerticalAlignment="Top" Width="74" Click="btn_clearrechteck_Click"/>
             <Image x:Name="img_rechteck" HorizontalAlignment="Left" Height="100" Margin="285,24,0,0" VerticalAlignment="Top" Width="100" Source="Rechteck.PNG"/>
@@ -65,8 +65,7 @@
                 <TextBox x:Name="txb_gewichtrechteck" HorizontalAlignment="Left" Height="23" Margin="451,222,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120" IsReadOnly="True"/>
                 <TextBox x:Name="txb_ftmizrechteck" HorizontalAlignment="Left" Height="23" Margin="451,293,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120" IsReadOnly="True"/>
                 <TextBox x:Name="txb_ftmiyrechteck" HorizontalAlignment="Left" Height="23" Margin="451,324,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120" IsReadOnly="True"/>
-                <Button Content="CATIA" HorizontalAlignment="Left" Margin="213,383,0,0" VerticalAlignment="Top" Width="75" Click="Button_Click"/>
-            
+                <Button x:Name="btn_catiarechteck" Content="CATIA" HorizontalAlignment="Left" Margin="78,309,0,0" VerticalAlignment="Top" Width="75" Click="Btn_catiarechteck_Click"/>
         </Grid>
              
           
