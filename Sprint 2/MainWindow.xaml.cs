@@ -315,6 +315,25 @@ namespace Sprint_2
                 MessageBox.Show("Bitte öffnen Sie CATIA!");
             }
         }
+
+        private void Btn_catiadreieck_Click(object sender, RoutedEventArgs e)
+        {
+            Catia_ConnectionDreieck cc = new Catia_ConnectionDreieck();
+            if (cc.laeuftCatia())
+            {
+                int h = Convert.ToInt32(txb_hoehedreieck.Text);
+                int b = Convert.ToInt32(txb_breitedreieck.Text);
+                int d = Convert.ToInt32(txb_dickedreieck.Text);
+                cc.ErzeugePart();
+                cc.erstelleLeereSkizze();
+                cc.ErzeugeProfil(h, b);
+                cc.ErzeugeBalken(d);
+            }
+            else
+            {
+                MessageBox.Show("Bitte öffnen Sie CATIA!");
+            }
+        }
     }
  }
 

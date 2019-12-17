@@ -70,7 +70,7 @@
              
           
 
-        <Grid x:Name="grid_dreieck" HorizontalAlignment="Left" Height="373" Margin="135,10,0,0" VerticalAlignment="Top" Width="647" Visibility="Hidden">
+        <Grid x:Name="grid_dreieck" HorizontalAlignment="Left" Height="373" Margin="135,10,0,0" VerticalAlignment="Top" Width="647" Visibility="Visible">
             <Button x:Name="btn_rechnedreieck" Content="Rechne" HorizontalAlignment="Left" Margin="10,341,0,0" VerticalAlignment="Top" Width="75" Click="btn_rechnedreieck_Click"/>
             <Button x:Name="btn_cleardreieck" Content="Löschen" HorizontalAlignment="Left" Margin="146,341,0,0" VerticalAlignment="Top" Width="74" Click="Btn_cleardreieck_Click"/>
             <Image x:Name="img_dreieck" HorizontalAlignment="Left" Height="100" Margin="285,24,0,0" VerticalAlignment="Top" Width="100" Source="Dreieck.PNG"/>
@@ -92,7 +92,8 @@
             <TextBox x:Name="txb_gewichtdreieck" HorizontalAlignment="Left" Height="23" Margin="451,222,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120" IsReadOnly="True"/>
             <TextBox x:Name="txb_ftmizdreieck" HorizontalAlignment="Left" Height="23" Margin="451,293,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120" IsReadOnly="True"/>
             <TextBox x:Name="txb_ftmiydreieck" HorizontalAlignment="Left" Height="23" Margin="451,324,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120" IsReadOnly="True"/>
-            <Button x:Name="btn_catiadreieck" Content="CATIA" HorizontalAlignment="Left" Margin="78,309,0,0" VerticalAlignment="Top" Width="75" Click="Button_Click_1"/>
+            <Button x:Name="btn_catiadreieck" Content="CATIA" HorizontalAlignment="Left" Margin="78,309,0,0" VerticalAlignment="Top" Width="75" Click="Btn_catiadreieck_Click"/>
+            
         </Grid>
 
         <Grid x:Name="grid_kreis" HorizontalAlignment="Left" Height="373" Margin="135,10,0,0" VerticalAlignment="Top" Width="647" Visibility="Hidden">

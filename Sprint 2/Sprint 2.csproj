@@ -76,6 +76,7 @@
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="Catia_Connection.cs" />
+    <Compile Include="Catia_ConnectionDreieck.cs" />
     <Compile Include="Catia_ConnectionQuadrat.cs" />
     <Compile Include="MainWindow.xaml.cs">
       <DependentUpon>MainWindow.xaml</DependentUpon>
