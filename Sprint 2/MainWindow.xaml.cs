@@ -247,8 +247,6 @@ namespace Sprint_2
             txb_gewichtkreisring.Text = ("");
             txb_innendurchmesserkreisring.Text = ("");
             txb_volumenkreisring.Text = ("");
-
-           
         }
         private void txb_hoeherechteck_LostFocus(object sender, RoutedEventArgs e)
         {
