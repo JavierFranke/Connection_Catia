@@ -37,7 +37,7 @@ namespace Sprint_2
         private void trv_quadrat_Selected(object sender, RoutedEventArgs e)
         {
             grid_dreieck.Visibility = Visibility.Hidden;
-            grid_halbkreis.Visibility = Visibility.Hidden;
+            grid_kreisring.Visibility = Visibility.Hidden;
             grid_kreis.Visibility = Visibility.Hidden;
             grid_quadrat.Visibility = Visibility.Visible;
             grid_rechteck.Visibility = Visibility.Hidden;
@@ -46,7 +46,7 @@ namespace Sprint_2
         private void trv_rechteck_Selected(object sender, RoutedEventArgs e)
         {
             grid_dreieck.Visibility = Visibility.Hidden;
-            grid_halbkreis.Visibility = Visibility.Hidden;
+            grid_kreisring.Visibility = Visibility.Hidden;
             grid_kreis.Visibility = Visibility.Hidden;
             grid_quadrat.Visibility = Visibility.Hidden;
             grid_rechteck.Visibility = Visibility.Visible;
@@ -55,7 +55,7 @@ namespace Sprint_2
         private void trv_dreieck_Selected(object sender, RoutedEventArgs e)
         {
             grid_dreieck.Visibility = Visibility.Visible;
-            grid_halbkreis.Visibility = Visibility.Hidden;
+            grid_kreisring.Visibility = Visibility.Hidden;
             grid_kreis.Visibility = Visibility.Hidden;
             grid_quadrat.Visibility = Visibility.Hidden;
             grid_rechteck.Visibility = Visibility.Hidden;
@@ -64,7 +64,7 @@ namespace Sprint_2
         private void trv_kreis_Selected(object sender, RoutedEventArgs e)
         {
             grid_dreieck.Visibility = Visibility.Hidden;
-            grid_halbkreis.Visibility = Visibility.Hidden;
+            grid_kreisring.Visibility = Visibility.Hidden;
             grid_kreis.Visibility = Visibility.Visible;
             grid_quadrat.Visibility = Visibility.Hidden;
             grid_rechteck.Visibility = Visibility.Hidden;
@@ -73,7 +73,7 @@ namespace Sprint_2
         private void trv_halbkreis_Selected(object sender, RoutedEventArgs e)
         {
             grid_dreieck.Visibility = Visibility.Hidden;
-            grid_halbkreis.Visibility = Visibility.Visible;
+            grid_kreisring.Visibility = Visibility.Visible;
             grid_kreis.Visibility = Visibility.Hidden;
             grid_quadrat.Visibility = Visibility.Hidden;
             grid_rechteck.Visibility = Visibility.Hidden;
@@ -123,13 +123,70 @@ namespace Sprint_2
         }
         private void btn_rechnequadrat_Click(object sender, RoutedEventArgs e)
         {
-            double Breite = Convert.ToDouble(txb_längequadrat.Text);
+            double Länge = Convert.ToDouble(txb_längequadrat.Text);
             double Dicke = Convert.ToDouble(txb_dickequadrat.Text);
             double Dichte = Convert.ToDouble(txb_dichtequadrat.Text);
 
-            
+            double fläche = Math.Pow(Länge, 2);
+            double volumen = Länge * Dicke;
+            double gewicht = volumen * Dichte;
+            double ftm = Math.Pow(Länge, 4) / 12;
+
+            txb_flaechequadrat.Text = Convert.ToString(fläche);
+            txb_volumenquadrat.Text = Convert.ToString(volumen);
+            txb_gewichtquadrat.Text = Convert.ToString(gewicht);
+            txb_ftmiyquadrat.Text = Convert.ToString(ftm);
+            txb_ftmizquadrat.Text = Convert.ToString(ftm);
         }
 
+        private void Btn_rechnekreis_Click(object sender, RoutedEventArgs e)
+        {
+            double durchmesser = Convert.ToDouble(txb_durchmesserkreis.Text);
+            double dicke = Convert.ToDouble(txb_dickekreis.Text);
+            double dichte = Convert.ToDouble(txb_dichtekreis.Text);
+
+            double fläche = Math.PI * Math.Pow(durchmesser / 2, 2);
+            double volumen = fläche * dicke;
+            double gewicht = volumen * dichte;
+            double ftm = (Math.PI * Math.Pow(durchmesser, 4)) / 64;
+
+            txb_flaechekreis.Text = Convert.ToString(fläche);
+            txb_volumenkreis.Text = Convert.ToString(volumen);
+            txb_gewichtkreis.Text = Convert.ToString(gewicht);
+            txb_ftmiykreis.Text = Convert.ToString(ftm);
+            txb_ftmizkreis.Text = Convert.ToString(ftm);
+
+        }
+
+        private void Btn_rechnekreisring_Click(object sender, RoutedEventArgs e)
+        {
+            double außendurchmesser = Convert.ToDouble(txb_außendurchmesserkreisring.Text);
+            double innendurchmesser = Convert.ToDouble(txb_innendurchmesserkreisring.Text);
+            double dicke = Convert.ToDouble(txb_dickekreisring.Text);
+            double dichte = Convert.ToDouble(txb_dichtekreisring.Text);
+
+            double fläche = Math.PI * Math.Pow(außendurchmesser / 2, 2) - (Math.PI * Math.Pow(innendurchmesser/2,2));
+            double volumen = fläche * dicke;
+            double gewicht = volumen * dicke;
+            double ftm = (Math.PI * (Math.Pow(außendurchmesser, 4) - Math.Pow(innendurchmesser, 4))) / 64;
+
+            txb_flaechekreisring.Text = Convert.ToString(fläche);
+            txb_volumenkreisring.Text = Convert.ToString(volumen);
+            txb_gewichtkreisring.Text = Convert.ToString(gewicht);
+            txb_ftmiykreisring.Text = Convert.ToString(ftm);
+            txb_ftmizkreisring.Text = Convert.ToString(ftm);
+        }
+        private void Btn_löschenquadrat_Click(object sender, RoutedEventArgs e)
+        {
+            txb_ftmiyquadrat.Text = ("");
+            txb_längequadrat.Text = ("");
+            txb_dichtequadrat.Text = ("");
+            txb_dickequadrat.Text = ("");
+            txb_flaechequadrat.Text = ("");
+            txb_ftmizquadrat.Text = ("");
+            txb_gewichtquadrat.Text = ("");
+            txb_volumenquadrat.Text = ("");
+        }
         private void btn_clearrechteck_Click(object sender, RoutedEventArgs e)
         {
             txb_ftmiyrechteck.Text = ("");
@@ -142,7 +199,42 @@ namespace Sprint_2
             txb_hoeherechteck.Text = ("");
             txb_volumenrechteck.Text = ("");
         }
+        private void Btn_cleardreieck_Click(object sender, RoutedEventArgs e)
+        {
+            txb_ftmiydreieck.Text = ("");
+            txb_breitedreieck.Text = ("");
+            txb_dichtedreieck.Text = ("");
+            txb_dickedreieck.Text = ("");
+            txb_flaechedreieck.Text = ("");
+            txb_ftmizdreieck.Text = ("");
+            txb_gewichtdreieck.Text = ("");
+            txb_hoehedreieck.Text = ("");
+            txb_volumendreieck.Text = ("");
+        }
+        private void Btn_clearkreis_Click(object sender, RoutedEventArgs e)
+        {
+            txb_ftmiykreis.Text = ("");
+            txb_durchmesserkreis.Text = ("");
+            txb_dichtekreis.Text = ("");
+            txb_dickekreis.Text = ("");
+            txb_flaechekreis.Text = ("");
+            txb_ftmizkreis.Text = ("");
+            txb_gewichtkreis.Text = ("");
+            txb_volumenkreis.Text = ("");
+        }
 
+        private void Btn_clearkreisring_Click(object sender, RoutedEventArgs e)
+        {
+            txb_ftmiykreisring.Text = ("");
+            txb_außendurchmesserkreisring.Text = ("");
+            txb_dichtekreisring.Text = ("");
+            txb_dickekreisring.Text = ("");
+            txb_flaechekreisring.Text = ("");
+            txb_ftmizkreisring.Text = ("");
+            txb_gewichtkreisring.Text = ("");
+            txb_innendurchmesserkreisring.Text = ("");
+            txb_volumenkreisring.Text = ("");
+        }
         private void txb_hoeherechteck_LostFocus(object sender, RoutedEventArgs e)
         {
             TextBox tb = (TextBox)sender;
@@ -185,12 +277,8 @@ namespace Sprint_2
                 cc.ErzeugeBalken(d);
             }
         }
-
-      
     }
-
-
-    }
+ }
 
 
            
