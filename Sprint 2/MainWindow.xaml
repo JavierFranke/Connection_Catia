@@ -81,7 +81,8 @@
 
 
 
-        <Grid x:Name="grid_dreieck" HorizontalAlignment="Left" Height="373" Margin="145,15,0,0" VerticalAlignment="Top" Width="647" Visibility="Visible">
+        <Grid x:Name="grid_dreieck" HorizontalAlignment="Left" Height="373" Margin="135,10,0,0" VerticalAlignment="Top" Width="647" Visibility="Hidden"
+             >
             <Button x:Name="btn_rechnedreieck" Content="Rechne" HorizontalAlignment="Left" Margin="10,341,0,0" VerticalAlignment="Top" Width="75" Click="btn_rechnedreieck_Click"/>
             <Button x:Name="btn_cleardreieck" Content="Löschen" HorizontalAlignment="Left" Margin="146,341,0,0" VerticalAlignment="Top" Width="74" Click="Btn_cleardreieck_Click"/>
             <Image x:Name="img_dreieck" HorizontalAlignment="Left" Height="100" Margin="285,24,0,0" VerticalAlignment="Top" Width="100" Source="Dreieck.PNG"/>
@@ -90,8 +91,8 @@
             <Label x:Name="lbl_dickedreieck" Content="Dicke:" HorizontalAlignment="Left" Margin="155,220,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.395,0.231"/>
 
             <Label x:Name="lbl_dichtedreieck" Content="Dichte:" HorizontalAlignment="Left" Margin="398,252,0,0" VerticalAlignment="Top" RenderTransformOrigin="-0.362,0.385"/>
-            <TextBox x:Name="txb_hoehedreieck" HorizontalAlignment="Left" Height="23" Margin="202,160,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120" LostFocus="txb_hoeherechteck_LostFocus" GotFocus="txb_hoeherechteck_GotFocus" HorizontalScrollBarVisibility="Visible"/>
-            <TextBox x:Name="txb_breitedreieck" HorizontalAlignment="Left" Height="23" Margin="202,191,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120" GotFocus="txb_hoeherechteck_GotFocus" LostFocus="txb_hoeherechteck_LostFocus"/>
+            <TextBox x:Name="txb_hoehedreieck" HorizontalAlignment="Left" Height="24" Margin="202,191,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120" LostFocus="txb_hoeherechteck_LostFocus" GotFocus="txb_hoeherechteck_GotFocus" HorizontalScrollBarVisibility="Visible"/>
+            <TextBox x:Name="txb_breitedreieck" HorizontalAlignment="Left" Height="24" Margin="202,160,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120" GotFocus="txb_hoeherechteck_GotFocus" LostFocus="txb_hoeherechteck_LostFocus"/>
             <TextBox x:Name="txb_dickedreieck" HorizontalAlignment="Left" Height="23" Margin="202,222,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120" GotFocus="txb_hoeherechteck_GotFocus" LostFocus="txb_hoeherechteck_LostFocus"/>
             <TextBox x:Name="txb_dichtedreieck" HorizontalAlignment="Left" Height="23" Margin="451,254,0,0" TextWrapping="WrapWithOverflow" Text="" VerticalAlignment="Top" Width="120" GotFocus="txb_hoeherechteck_GotFocus" LostFocus="txb_hoeherechteck_LostFocus" HorizontalScrollBarVisibility="Visible" VerticalScrollBarVisibility="Auto"/>
             <Label x:Name="lbl_flaechedreieck" Content="Fläche A:" HorizontalAlignment="Left" Margin="389,158,0,0" VerticalAlignment="Top"/>
@@ -99,7 +100,7 @@
             <Label x:Name="lbl_gewichtdreieck" Content="Gewicht:" HorizontalAlignment="Left" Margin="391,220,0,0" VerticalAlignment="Top"/>
             <Label x:Name="lbl_ftmizdreieck" Content="Flächenträgheitsmoment Iz:" HorizontalAlignment="Left" Margin="290,291,0,0" VerticalAlignment="Top"/>
             <Label x:Name="lbl_ftmiydreieck" Content="Flächenträgheitsmoment Iy:" HorizontalAlignment="Left" Margin="289,322,0,0" VerticalAlignment="Top"/>
-            <TextBox x:Name="txb_flaechedreieck" HorizontalAlignment="Left" Height="23" Margin="451,160,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120" IsReadOnly="True"/>
+            <TextBox x:Name="txb_flaechedreieck" HorizontalAlignment="Left" Height="23" Margin="451,160,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120" IsReadOnly="True" TextChanged="Txb_flaechedreieck_TextChanged"/>
             <TextBox x:Name="txb_volumendreieck" HorizontalAlignment="Left" Height="23" Margin="451,191,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120" IsReadOnly="True"/>
             <TextBox x:Name="txb_gewichtdreieck" HorizontalAlignment="Left" Height="23" Margin="451,222,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120" IsReadOnly="True"/>
             <TextBox x:Name="txb_ftmizdreieck" HorizontalAlignment="Left" Height="23" Margin="451,293,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120" IsReadOnly="True"/>
@@ -110,7 +111,6 @@
             <Button Content="Al" HorizontalAlignment="Left" Height="20" Margin="272,250,0,0" VerticalAlignment="Top" Width="26" Click="btn_Aluminium"/>
 
         </Grid>
-
 
         <Grid x:Name="grid_kreis" HorizontalAlignment="Left" Height="373" Margin="135,10,0,0" VerticalAlignment="Top" Width="647" Visibility="Hidden">
             <Button x:Name="btn_rechnekreis" Content="Rechne" HorizontalAlignment="Left" Margin="10,341,0,0" VerticalAlignment="Top" Width="75" Click="Btn_rechnekreis_Click"/>
@@ -168,6 +168,12 @@
             <Button Content="Al" HorizontalAlignment="Left" Height="20" Margin="272,250,0,0" VerticalAlignment="Top" Width="26" Click="btn_Aluminium"/>
 
         </Grid>
-        
+        <Grid x:Name="grid_anfangsbild" HorizontalAlignment="Left" Height="373" Margin="140,15,0,0" VerticalAlignment="Top" Width="642" Visibility="Visible">
+            <Image HorizontalAlignment="Left" Height="153" Margin="448,10,0,0" VerticalAlignment="Top" Width="169" Source="JadeHS.PNG"/>
+            <Label Content="Ihr Persönlicher &#xD;&#xA;Taschenrechner " HorizontalAlignment="Left" Margin="220,67,0,0" VerticalAlignment="Top" Height="87" Width="138" FontSize="18"/>
+            <Label Content="Bitte wählen Sie einen Körper aus! " HorizontalAlignment="Left" Margin="111,196,0,0" VerticalAlignment="Top" Height="98" Width="403" FontSize="24"/>
+        </Grid>
+
+
     </Grid>
 </Window>

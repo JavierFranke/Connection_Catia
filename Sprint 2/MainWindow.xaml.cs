@@ -416,6 +416,11 @@ namespace Sprint_2
             }
 
         }
+
+        private void Txb_flaechedreieck_TextChanged(object sender, TextChangedEventArgs e)
+        {
+
+        }
     }
 }
 
