@@ -55,19 +55,13 @@
             <Label x:Name="lbl_höherechteck" Content="Höhe h:" HorizontalAlignment="Left" Margin="146,158,0,0" VerticalAlignment="Top"/>
             <Label x:Name="lbl_breiterechteck" Content="Breite b:" HorizontalAlignment="Left" Margin="143,189,0,0" VerticalAlignment="Top"/>
             <Label x:Name="lbl_dickerechteck" Content="Dicke:" HorizontalAlignment="Left" Margin="155,220,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.395,0.231"/>
-<<<<<<< HEAD
-            <Label x:Name="lbl_dichterechteck" Content="Dichte:" HorizontalAlignment="Left" Margin="150,251,0,0" VerticalAlignment="Top" RenderTransformOrigin="-0.362,0.385"/>
-            <TextBox x:Name="txb_hoeherechteck" HorizontalAlignment="Left" Height="23" Margin="202,160,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120" LostFocus="txb_hoeherechteck_LostFocus" GotFocus="txb_hoeherechteck_GotFocus"/>
-            <TextBox x:Name="txb_breiterechteck" HorizontalAlignment="Left" Height="23" Margin="202,191,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120" GotFocus="txb_hoeherechteck_GotFocus" LostFocus="txb_hoeherechteck_LostFocus"/>
-            <TextBox x:Name="txb_dickerechteck" HorizontalAlignment="Left" Height="23" Margin="202,222,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120" GotFocus="txb_hoeherechteck_GotFocus" LostFocus="txb_hoeherechteck_LostFocus"/>
-            <TextBox x:Name="txb_dichterechteck" HorizontalAlignment="Left" Height="23" Margin="202,253,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120" GotFocus="txb_hoeherechteck_GotFocus" LostFocus="txb_hoeherechteck_LostFocus"/>
-=======
+
+
             <Label x:Name="lbl_dichterechteck" Content="Dichte:" HorizontalAlignment="Left" Margin="391,251,0,0" VerticalAlignment="Top" RenderTransformOrigin="-0.362,0.385"/>
             <TextBox x:Name="txb_hoeherechteck" HorizontalAlignment="Left" Height="23" Margin="202,160,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120" LostFocus="txb_hoeherechteck_LostFocus" GotFocus="txb_hoeherechteck_GotFocus"/>
             <TextBox x:Name="txb_breiterechteck" HorizontalAlignment="Left" Height="23" Margin="202,191,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120" GotFocus="txb_hoeherechteck_GotFocus" LostFocus="txb_hoeherechteck_LostFocus"/>
             <TextBox x:Name="txb_dickerechteck" HorizontalAlignment="Left" Height="23" Margin="202,222,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120" GotFocus="txb_hoeherechteck_GotFocus" LostFocus="txb_hoeherechteck_LostFocus"/>
             <TextBox x:Name="txb_dichterechteck" HorizontalAlignment="Left" Height="23" Margin="451,254,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120" GotFocus="txb_hoeherechteck_GotFocus" LostFocus="txb_hoeherechteck_LostFocus"/>
->>>>>>> 940e3a26ff46c6de270c1182e4e7cc4abe1c6fb0
             <Label x:Name="lbl_flaecherechteck" Content="Fläche A:" HorizontalAlignment="Left" Margin="389,158,0,0" VerticalAlignment="Top"/>
             <Label x:Name="lbl_volumenrechteck" Content="Volumen V:" HorizontalAlignment="Left" Margin="375,189,0,0" VerticalAlignment="Top"/>
             <Label x:Name="lbl_gewichtrechteck" Content="Gewicht:" HorizontalAlignment="Left" Margin="391,220,0,0" VerticalAlignment="Top"/>
@@ -79,17 +73,11 @@
             <TextBox x:Name="txb_ftmizrechteck" HorizontalAlignment="Left" Height="23" Margin="451,293,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120" IsReadOnly="True"/>
             <TextBox x:Name="txb_ftmiyrechteck" HorizontalAlignment="Left" Height="23" Margin="451,324,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120" IsReadOnly="True"/>
             <Button x:Name="btn_catiarechteck" Content="CATIA" HorizontalAlignment="Left" Margin="78,309,0,0" VerticalAlignment="Top" Width="75" Click="Btn_catiarechteck_Click"/>
-<<<<<<< HEAD
-        </Grid>
-
-
-=======
             <Button Content="Cu" HorizontalAlignment="Left" VerticalAlignment="Top" Width="31" Margin="202,250,0,0" Click="btn_Kupfer"/>
             <Button Content="Fe" HorizontalAlignment="Left" Height="20" Margin="238,250,0,0" VerticalAlignment="Top" Width="29" Click="btn_Eisen"/>
             <Button Content="Al" HorizontalAlignment="Left" Height="20" Margin="272,250,0,0" VerticalAlignment="Top" Width="26" Click="btn_Aluminium"/>
 
         </Grid>
->>>>>>> 940e3a26ff46c6de270c1182e4e7cc4abe1c6fb0
 
 
 
@@ -100,19 +88,12 @@
             <Label x:Name="lbl_höhedreieck" Content="Höhe h:" HorizontalAlignment="Left" Margin="146,158,0,0" VerticalAlignment="Top"/>
             <Label x:Name="lbl_breitedreieck" Content="Breite b:" HorizontalAlignment="Left" Margin="143,189,0,0" VerticalAlignment="Top"/>
             <Label x:Name="lbl_dickedreieck" Content="Dicke:" HorizontalAlignment="Left" Margin="155,220,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.395,0.231"/>
-<<<<<<< HEAD
-            <Label x:Name="lbl_dichtedreieck" Content="Dichte:" HorizontalAlignment="Left" Margin="391,251,0,0" VerticalAlignment="Top" RenderTransformOrigin="-0.362,0.385"/>
-            <TextBox x:Name="txb_hoehedreieck" HorizontalAlignment="Left" Height="23" Margin="202,160,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120" LostFocus="txb_hoeherechteck_LostFocus" GotFocus="txb_hoeherechteck_GotFocus"/>
-            <TextBox x:Name="txb_breitedreieck" HorizontalAlignment="Left" Height="23" Margin="202,191,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120" GotFocus="txb_hoeherechteck_GotFocus" LostFocus="txb_hoeherechteck_LostFocus"/>
-            <TextBox x:Name="txb_dickedreieck" HorizontalAlignment="Left" Height="23" Margin="202,222,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120" GotFocus="txb_hoeherechteck_GotFocus" LostFocus="txb_hoeherechteck_LostFocus"/>
-            <TextBox x:Name="txb_dichtedreieck" HorizontalAlignment="Left" Height="23" Margin="451,254,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120" GotFocus="txb_hoeherechteck_GotFocus" LostFocus="txb_hoeherechteck_LostFocus"/>
-=======
-            <Label x:Name="lbl_dichtedreieck" Content="Dichte:" HorizontalAlignment="Left" Margin="150,251,0,0" VerticalAlignment="Top" RenderTransformOrigin="-0.362,0.385"/>
+
+            <Label x:Name="lbl_dichtedreieck" Content="Dichte:" HorizontalAlignment="Left" Margin="398,252,0,0" VerticalAlignment="Top" RenderTransformOrigin="-0.362,0.385"/>
             <TextBox x:Name="txb_hoehedreieck" HorizontalAlignment="Left" Height="23" Margin="202,160,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120" LostFocus="txb_hoeherechteck_LostFocus" GotFocus="txb_hoeherechteck_GotFocus" HorizontalScrollBarVisibility="Visible"/>
             <TextBox x:Name="txb_breitedreieck" HorizontalAlignment="Left" Height="23" Margin="202,191,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120" GotFocus="txb_hoeherechteck_GotFocus" LostFocus="txb_hoeherechteck_LostFocus"/>
             <TextBox x:Name="txb_dickedreieck" HorizontalAlignment="Left" Height="23" Margin="202,222,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120" GotFocus="txb_hoeherechteck_GotFocus" LostFocus="txb_hoeherechteck_LostFocus"/>
-            <TextBox x:Name="txb_dichtedreieck" HorizontalAlignment="Left" Height="23" Margin="202,253,0,0" TextWrapping="WrapWithOverflow" Text="" VerticalAlignment="Top" Width="120" GotFocus="txb_hoeherechteck_GotFocus" LostFocus="txb_hoeherechteck_LostFocus" HorizontalScrollBarVisibility="Visible" VerticalScrollBarVisibility="Auto"/>
->>>>>>> 0df9c307d73e613122b1efed9f1879efdfe19078
+            <TextBox x:Name="txb_dichtedreieck" HorizontalAlignment="Left" Height="23" Margin="451,254,0,0" TextWrapping="WrapWithOverflow" Text="" VerticalAlignment="Top" Width="120" GotFocus="txb_hoeherechteck_GotFocus" LostFocus="txb_hoeherechteck_LostFocus" HorizontalScrollBarVisibility="Visible" VerticalScrollBarVisibility="Auto"/>
             <Label x:Name="lbl_flaechedreieck" Content="Fläche A:" HorizontalAlignment="Left" Margin="389,158,0,0" VerticalAlignment="Top"/>
             <Label x:Name="lbl_volumendreieck" Content="Volumen V:" HorizontalAlignment="Left" Margin="375,189,0,0" VerticalAlignment="Top"/>
             <Label x:Name="lbl_gewichtdreieck" Content="Gewicht:" HorizontalAlignment="Left" Margin="391,220,0,0" VerticalAlignment="Top"/>
@@ -150,19 +131,14 @@
             <TextBox x:Name="txb_volumenkreis" HorizontalAlignment="Left" Height="23" Margin="451,191,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120" IsReadOnly="True"/>
             <TextBox x:Name="txb_gewichtkreis" HorizontalAlignment="Left" Height="23" Margin="451,222,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120" IsReadOnly="True"/>
             <TextBox x:Name="txb_ftmizkreis" HorizontalAlignment="Left" Height="23" Margin="451,293,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120" IsReadOnly="True"/>
+            <Button x:Name="btn_catiakreis" Content="CATIA" HorizontalAlignment="Left" Margin="78,309,0,0" VerticalAlignment="Top" Width="75" Click="Btn_catiakreis_Click"/>
             <TextBox x:Name="txb_ftmiykreis" HorizontalAlignment="Left" Height="23" Margin="451,324,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120" IsReadOnly="True"/>
-<<<<<<< HEAD
-            <Button x:Name="btn_catiakreis" Content="CATIA" HorizontalAlignment="Left" Margin="78,309,0,0" VerticalAlignment="Top" Width="75" Click="Button_Click_1"/>
-
-
-=======
             <Button Content="Cu" HorizontalAlignment="Left" VerticalAlignment="Top" Width="31" Margin="202,250,0,0" Click="btn_Kupfer"/>
             <Button Content="Fe" HorizontalAlignment="Left" Height="20" Margin="238,250,0,0" VerticalAlignment="Top" Width="29" Click="btn_Eisen"/>
             <Button Content="Al" HorizontalAlignment="Left" Height="20" Margin="272,250,0,0" VerticalAlignment="Top" Width="26" Click="btn_Aluminium"/>
->>>>>>> 940e3a26ff46c6de270c1182e4e7cc4abe1c6fb0
 
         </Grid>
-       
+
 
         <Grid x:Name="grid_kreisring" HorizontalAlignment="Left" Height="373" Margin="135,10,0,0" VerticalAlignment="Top" Width="647" Visibility="Hidden">
             <Button x:Name="btn_rechnekreisring" Content="Rechne" HorizontalAlignment="Left" Margin="10,341,0,0" VerticalAlignment="Top" Width="75" Click="Btn_rechnekreisring_Click"/>
@@ -186,17 +162,12 @@
             <TextBox x:Name="txb_gewichtkreisring" HorizontalAlignment="Left" Height="23" Margin="451,222,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120" IsReadOnly="True"/>
             <TextBox x:Name="txb_ftmizkreisring" HorizontalAlignment="Left" Height="23" Margin="451,293,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120" IsReadOnly="True"/>
             <TextBox x:Name="txb_ftmiykreisring" HorizontalAlignment="Left" Height="23" Margin="451,324,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120" IsReadOnly="True"/>
-<<<<<<< HEAD
-            <Button x:Name="btn_catiaring" Content="CATIA" HorizontalAlignment="Left"  Margin="78,309,0,80" Click="Btn_catiaring_Click" Width="75"/>
-        </Grid>
-        
-=======
+            <Button x:Name="btn_catiakreisring" Content="CATIA" HorizontalAlignment="Left" Margin="78,309,0,0" VerticalAlignment="Top" Width="75" Click="Btn_catiakreisring_Click"/>
             <Button Content="Cu" HorizontalAlignment="Left" VerticalAlignment="Top" Width="31" Margin="202,250,0,0" Click="btn_Kupfer"/>
             <Button Content="Fe" HorizontalAlignment="Left" Height="20" Margin="238,250,0,0" VerticalAlignment="Top" Width="29" Click="btn_Eisen"/>
             <Button Content="Al" HorizontalAlignment="Left" Height="20" Margin="272,250,0,0" VerticalAlignment="Top" Width="26" Click="btn_Aluminium"/>
 
         </Grid>
->>>>>>> 940e3a26ff46c6de270c1182e4e7cc4abe1c6fb0
-
+        
     </Grid>
 </Window>

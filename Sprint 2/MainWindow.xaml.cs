@@ -247,11 +247,7 @@ namespace Sprint_2
             txb_gewichtkreisring.Text = ("");
             txb_innendurchmesserkreisring.Text = ("");
             txb_volumenkreisring.Text = ("");
-<<<<<<< HEAD
 
-
-=======
->>>>>>> 940e3a26ff46c6de270c1182e4e7cc4abe1c6fb0
         }
         private void txb_hoeherechteck_LostFocus(object sender, RoutedEventArgs e)
         {
@@ -319,8 +315,7 @@ namespace Sprint_2
                 MessageBox.Show("Bitte öffnen Sie CATIA!");
             }
         }
-<<<<<<< HEAD
-=======
+
 
         private void Btn_catiadreieck_Click(object sender, RoutedEventArgs e)
         {
@@ -375,11 +370,6 @@ namespace Sprint_2
             txb_dichtekreisring.Text = "2,7";
         }
 
-
-    }
- }
->>>>>>> 940e3a26ff46c6de270c1182e4e7cc4abe1c6fb0
-
         private void Btn_catiakreis_Click(object sender, RoutedEventArgs e)
         {
             Catia_ConnectionKreis cc = new Catia_ConnectionKreis();
@@ -400,12 +390,12 @@ namespace Sprint_2
             {
                 MessageBox.Show("Bitte öffnen Sie bitte CATIA.");
             }
+
         }
 
-        private void Btn_catiaring_Click(object sender, RoutedEventArgs e)
+        private void Btn_catiakreisring_Click(object sender, RoutedEventArgs e)
         {
-            
-                Catia_ConnectionRing cc = new Catia_ConnectionRing();
+            Catia_ConnectionRing cc = new Catia_ConnectionRing();
             if (cc.laeuftCatia())
             {
                 int a = Convert.ToInt32(txb_außendurchmesserkreisring.Text);
@@ -415,25 +405,32 @@ namespace Sprint_2
 
                 cc.ErzeugePart();
                 cc.erstelleLeereSkizze();
-                cc.setMittelpunkt(a,i);
+                cc.setMittelpunkt(a, i);
                 cc.ErzeugeBalkenRing(d);
-              
+
 
             }
             else
             {
                 MessageBox.Show("Bitte öffnen Sie bitte CATIA.");
             }
+
         }
     }
 }
 
-           
-        
-        
 
-    
 
-    
+
+
+
+
+
+
+
+
+
+
+
 
 
